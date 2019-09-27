@@ -24,7 +24,7 @@ public class addcart extends AppCompatActivity {
 
 
     TextView tv1, tv2, tv3, total;
-    Button add;
+    Button add,car;
     String st1, st2, st3;
     int counter;
     RadioGroup r1,r2;
@@ -39,6 +39,7 @@ public class addcart extends AppCompatActivity {
         mydb1=new dbcon(this);
         tv2 = findViewById(R.id.textView16);
         tv1 = findViewById(R.id.textView14);
+        car=findViewById(R.id.button16);
 
 
         tv3 = (TextView) findViewById(R.id.counterValue);
@@ -57,6 +58,7 @@ public class addcart extends AppCompatActivity {
 
         st2 = getIntent().getExtras().getString("value2");
         tv1.setText(st2);
+        Viewall();
        add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -146,7 +148,35 @@ public class addcart extends AppCompatActivity {
         });
     }
 
+public void Viewall(){
+        car.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Cursor resu=mydb1.getdata();
+                if(resu.getCount()==0){
+                show("Erorr","empty");
 
+                }
+                StringBuffer buffer=new StringBuffer();
+                while (resu.moveToNext()){
+                    buffer.append("Id :"+resu.getString(0)+"\n");
+                    buffer.append("Item :"+resu.getString(1)+"\n");
+                    buffer.append("Qnt :"+resu.getString(2)+"\n");
+                    buffer.append("Totl :"+resu.getString(3)+"\n\n");
+
+                }
+                show("Data",buffer.toString());
+            }
+        });
+}
+
+public void show(String tit,String msg){
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(tit);
+        builder.setMessage(msg);
+        builder.show();
+}
     public void counterIn(View v) {
 
 

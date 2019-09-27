@@ -11,13 +11,13 @@
         android:id="@+id/button15"
         android:layout_width="44dp"
         android:layout_height="35dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="141dp"
         android:onClick="counterIn"
         android:text="+"
         app:layout_constraintStart_toEndOf="@+id/counterValue"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView12"
@@ -78,92 +78,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="60dp"
-        android:text="Color"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="274dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginLeft="92dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/textView16">
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Black" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gold" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="123dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginLeft="92dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
-
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="32 GB" />
-
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="64 GB" />
-
-        <RadioButton
-            android:id="@+id/radioButton7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="36dp"
-            android:layout_marginRight="36dp"
-            android:text="128GB" />
-
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="84dp"
-        android:text="Memory"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-    <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="152dp"
         android:text="Number of Item"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/counterValue"
@@ -171,14 +94,14 @@
         android:layout_height="34dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="142dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:ems="10"
         android:text="qnt"
         app:layout_constraintEnd_toStartOf="@+id/button15"
         app:layout_constraintStart_toEndOf="@+id/button14"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
         android:id="@+id/button13"
@@ -197,13 +120,13 @@
         android:id="@+id/button14"
         android:layout_width="44dp"
         android:layout_height="35dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="142dp"
         android:onClick="counterDe"
         android:text="-"
         app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView21"
@@ -226,7 +149,16 @@
         android:text="Total"
         app:layout_constraintEnd_toStartOf="@+id/textView21"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" /><![CDATA[
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="parent" /><![CDATA[
 
 
 

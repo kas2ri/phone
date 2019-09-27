@@ -59,6 +59,12 @@ public class dbcon extends SQLiteOpenHelper {
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
     }
+    public Cursor getdata(){
+        db=getWritableDatabase();
+        Cursor res=db.rawQuery("SELECT * FROM cart",null);
+        return res;
+
+    }
 
     public void InsertContacts(Contact contact) {
         db = getWritableDatabase();
